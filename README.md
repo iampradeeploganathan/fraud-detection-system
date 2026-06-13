@@ -1,34 +1,36 @@
 # Real-Time Fraud Detection System
 
-## Overview
-A production-ready fraud detection system built using XGBoost and deployed with Streamlit and Docker.
+An end-to-end machine learning system for detecting fraudulent financial transactions using XGBoost, custom feature engineering, threshold optimization, SHAP explainability, FastAPI, Streamlit, and Docker.
 
-## Features
-- Feature Engineering
-- XGBoost Fraud Detection
-- Threshold Optimization
-- SHAP Explainability
-- Streamlit Dashboard
-- Docker Containerization
+---
 
-## Tech Stack
-- Python
-- Pandas
-- Scikit-Learn
-- XGBoost
-- SHAP
-- Streamlit
-- Docker
+## Problem Statement
 
-## Model Performance
+Financial fraud causes significant losses for payment platforms and banks.
 
-| Metric | Score |
+The objective of this project is to identify fraudulent transactions while maximizing fraud recall and minimizing false negatives.
+
+---
+
+## Dataset
+
+Source:
+Kaggle - Synthetic Financial Transaction Dataset
+
+### Dataset Statistics
+
+| Metric | Value |
 |----------|----------|
-| ROC-AUC | YOUR_SCORE |
-| Average Precision | YOUR_SCORE |
+| Total Transactions | 6,362,620 |
+| Fraudulent Transactions | 8,213 |
+| Fraud Rate | 0.129% |
+| Features Before Engineering | 11 |
+| Features After Engineering | 11 |
 
-## Run Locally
+Target Variable:
 
-```bash
-pip install -r requirements.txt
-streamlit run streamlit_app.py
+```text
+isFraud
+
+0 = Legitimate Transaction
+1 = Fraudulent Transaction
